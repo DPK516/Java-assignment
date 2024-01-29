@@ -4,20 +4,20 @@ public class question_4 {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the string : ");
-        String s= sc.next();
-        int n=s.length();
-        String ans="Answer";
+        String st= sc.next();
+        int n=st.length();
+        boolean pl=true;
         for (int i=0;i<n;i++){
-            //System.out.println(s.charAt(i));
-            if (s.charAt(i)==s.charAt(n-(i+1))){
-                ans="This is a palindrome";
-
+            if (st.charAt(i)==st.charAt(n-1-i)){
+                pl=true;
             }
             else {
-                ans="This is not a palindrome";
+                pl=false;
+                break;
             }
         }
-        System.out.println(ans);
+        if (pl==true) System.out.println("Its a palindrome");
+        else System.out.println("Its not a palindrome");
 
     }
 }
