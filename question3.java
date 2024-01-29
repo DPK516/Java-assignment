@@ -7,16 +7,14 @@ public class question_3 {
         int n1 = sc.nextInt();
         System.out.println("Enter the second number : ");
         int n2 = sc.nextInt();
-        int gcd = 1;
-        for (int i = 1; i >= 1; i++) {
-            int d1 = n1 / i;
-            int d2 = n2 / i;
-            if (n1 % i == 0 && n2 % i == 0) {
-                gcd = i;
+        int i=1;
+        int gcd=1;
+        while (i<=n1 && i<=n2){
+            if (n1%i==0 && n2%i==0){
+                if (i>gcd) gcd=i;
             }
-            if (d1 == 0 || d2 == 0) break;
-
+            i++;
         }
-        System.out.println("The GCD of "+n1+" and "+n2+" is : "+gcd);
+        System.out.println("Greatest common divisor is : "+gcd);
     }
 }
